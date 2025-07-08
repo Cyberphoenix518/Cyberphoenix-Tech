@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aridais Project Limited | Premium Construction Services</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+
+        .hero-section {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+        
+        .project-card {
+            transition: all 0.3s ease;
+        }
+        
+        .project-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        
+        .stats-item {
+            position: relative;
+        }
+        
+        .stats-item::after {
+            content: '';
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            height: 50%;
+            width: 1px;
+            background-color: rgba(255, 255, 255, 0.3);
+        }
+        
+        .stats-item:last-child::after {
+            display: none;
+        }
+        
+        @media (max-width: 768px) {
+            .stats-item::after {
+                display: none;
+            }
+        }
+        
+        .nav-link {
+            position: relative;
+        }
+        
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: #f59e0b;
+            transition: width 0.3s ease;
+        }
+        
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        
+        .mobile-menu {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+        }
+        
+        .mobile-menu.open {
+            max-height: 500px;
+        }
+    </style>
+</head>
+<body class="font-sans antialiased text-gray-800">
+
+    <header class="fixed w-full bg-white shadow-md z-50" style="background-color: rgba(14, 233, 69, 0.7);">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center">
+                <div class="w-12 h-12 bg-amber-500 rounded-full flex items-center justify-center mr-3">
+                    <i class="fas fa-building text-white text-xl"></i>
+                </div>
+                <a href="#" class="text-2xl font-bold text-gray-800">Aridais<span class="text-amber-500">Project</span></a>
+            </div>
+            
+            <nav class="hidden md:flex space-x-8">
+                <a href="#home" class="nav-link font-medium">Home</a>
+                <a href="#about" class="nav-link font-medium">About</a>
+                <a href="#services" class="nav-link font-medium">Services</a>
+                <a href="#projects" class="nav-link font-medium">Projects</a>
+                <a href="#testimonials" class="nav-link font-medium">Testimonials</a>
+                <a href="#contact" class="nav-link font-medium">Contact</a>
+            </nav>
+            
+            <div class="hidden md:block">
+                <a href="#contact" class="bg-amber-500 hover:bg-amber-600 text-white px-6 py-2 rounded-full font-medium transition duration-300">Get Quote</a>
+            </div>
+            
+            <button id="mobile-menu-button" class="md:hidden text-gray-800 focus:outline-none">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+        
+        <div id="mobile-menu" class="mobile-menu md:hidden bg-white">
+            <div class="container mx-auto px-4 py-2 flex flex-col space-y-3">
+                <a href="#home" class="py-2 font-medium border-b border-gray-100">Home</a>
+                <a href="#about" class="py-2 font-medium border-b border-gray-100">About</a>
+                <a href="#services" class="py-2 font-medium border-b border-gray-100">Services</a>
+                <a href="#projects" class="py-2 font-medium border-b border-gray-100">Projects</a>
+                <a href="#testimonials" class="py-2 font-medium border-b border-gray-100">Testimonials</a>
+                <a href="#contact" class="py-2 font-medium">Contact</a>
+                <a href="#contact" class="bg-amber-500 hover:bg-amber-600 text-white px-6 py-2 rounded-full font-medium text-center my-2 transition duration-300">Get Quote</a>
+            </div>
+        </div>
+    </header>
+
+    <section id="home" class="hero-section pt-32 pb-20 md:pt-40 md:pb-32 text-white">
+        <div class="container mx-auto px-4">
+            <div class="max-w-2xl">
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6">Building Your Vision, <span class="text-amber-400" style="color: rgba(14, 233, 69, 0.7);">Constructing Reality</span></h1>
+                <p class="text-lg md:text-xl mb-8 text-gray-300">Aridais Project Limited delivers exceptional construction services with unmatched quality and precision for residential and commercial projects.
+                    At Aridais Project Limited, we offer comprehensive project management solutions, including:
+
+                    Project Planning & Feasibility Studies
+                    We help clients define clear project goals, evaluate viability, and establish practical timelines and budgets.
+
+                    End-to-End Project Management
+                    From inception to completion, we manage every stage of the project lifecycle to ensure on-time, on-budget delivery.
+                </p>
+                <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                    <a href="#contact" class="border-2 border-white hover:bg-white hover:text-gray-800 text-white px-8 py-3 rounded-full font-medium text-center transition duration-300" style="background-color: rgba(14, 165, 233, 0.7);">Get Started</a>
+                    <a href="#projects" class="border-2 border-white hover:bg-white hover:text-gray-800 text-white px-8 py-3 rounded-full font-medium text-center transition duration-300">Our Projects</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="bg-amber-600 text-white py-8" style="background-color: rgba(14, 165, 233, 0.7);">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-wrap justify-center md:justify-between text-center">
+                <div class="stats-item px-6 py-4 md:py-0">
+                    <div class="text-3xl font-bold mb-2">250+</div>
+                    <div class="text-sm uppercase tracking-wider">Projects Completed</div>
+                </div>
+                <div class="stats-item px-6 py-4 md:py-0">
+                    <div class="text-3xl font-bold mb-2">15+</div>
+                    <div class="text-sm uppercase tracking-wider">Years Experience</div>
+                </div>
+                <div class="stats-item px-6 py-4 md:py-0">
+                    <div class="text-3xl font-bold mb-2">50+</div>
+                    <div class="text-sm uppercase tracking-wider">Professional Team</div>
+                </div>
+                <div class="stats-item px-6 py-4 md:py-0">
+                    <div class="text-3xl font-bold mb-2">100%</div>
+                    <div class="text-sm uppercase tracking-wider">Client Satisfaction</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0 md:pr-10">
+                    <div class="relative">
+                        <img src="image.jpg" alt="Construction Team" class="rounded-lg shadow-xl w-full">
+                        <div class="absolute -bottom-6 -right-6 bg-white p-4 rounded-lg shadow-lg hidden md:block">
+                            <div class="text-4xl font-bold text-amber-500"  style="color: rgba(14, 233, 69, 0.7);">15+</div>
+                            <div class="text-gray-600 text-sm" style="color: black;">Years Experience</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="md:w-1/2">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-6" style="color: rgba(14, 233, 69, 0.7);">About <span class="text-amber-500"  style="color: rgba(14, 233, 69, 0.7);">Aridais Project</span></h2>
+                    <p class="text-gray-600 mb-6 leading-relaxed">Founded in 2008, Aridais Project Limited has grown to become one of the most trusted names in the construction industry. Our commitment to excellence, attention to detail, and dedication to client satisfaction sets us apart.</p>
+                    
+                    <div class="mb-8">
+                        <div class="flex items-start mb-4">
+                            <div class="bg-amber-100 p-2 rounded-full mr-4">
+                                <i class="fas fa-check text-amber-500"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-lg mb-1">Quality Assurance</h3>
+                                <p class="text-gray-600">We adhere to the highest industry standards to ensure every project meets our rigorous quality benchmarks.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start mb-4">
+                            <div class="bg-amber-100 p-2 rounded-full mr-4">
+                                <i class="fas fa-check text-amber-500"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-lg mb-1">Innovative Solutions</h3>
+                                <p class="text-gray-600">Our team stays ahead of industry trends to deliver cutting-edge construction solutions.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="bg-amber-100 p-2 rounded-full mr-4">
+                                <i class="fas fa-check text-amber-500"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-lg mb-1">Timely Delivery</h3>
+                                <p class="text-gray-600">We understand the value of your time and commit to completing projects within agreed timelines.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <a href="#contact" class="inline-block bg-amber-500 hover:bg-amber-600 text-white px-6 py-3 rounded-full font-medium transition duration-300" style="background-color: rgba(14, 233, 69, 0.7);">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4"  style="color: rgba(14, 233, 69, 0.7);">Our <span class="text-amber-500" style="color: rgba(14, 233, 69, 0.7);">Services</span></h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">We offer comprehensive construction services tailored to meet your specific needs and exceed your expectations.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden transition duration-300 hover:shadow-xl">
+                    <div class="h-48 bg-gray-200 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1600585152220-90363fe7e115?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Residential Construction" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <div class="w-12 h-12 bg-amber-100 rounded-full flex items-center justify-center mb-4">
+                            <i class="fas fa-home text-amber-500 text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">Residential Construction</h3>
+                        <p class="text-gray-600 mb-4">From custom homes to multi-family units, we build living spaces that combine comfort, functionality, and aesthetic appeal.</p>
+                        <a href="#" class="text-amber-500 font-medium flex items-center">
+                            Learn More <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Service 2 -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden transition duration-300 hover:shadow-xl">
+                    <div class="h-48 bg-gray-200 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Commercial Construction" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <div class="w-12 h-12 bg-amber-100 rounded-full flex items-center justify-center mb-4">
+                            <i class="fas fa-building text-amber-500 text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">Commercial Construction</h3>
+                        <p class="text-gray-600 mb-4">We specialize in office buildings, retail spaces, and other commercial properties designed for business success.</p>
+                        <a href="#" class="text-amber-500 font-medium flex items-center">
+                            Learn More <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Service 3 -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden transition duration-300 hover:shadow-xl">
+                    <div class="h-48 bg-gray-200 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1605276374104-dee2a0ed3cd6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Renovation & Remodeling" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <div class="w-12 h-12 bg-amber-100 rounded-full flex items-center justify-center mb-4">
+                            <i class="fas fa-tools text-amber-500 text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">Renovation & Remodeling</h3>
+                        <p class="text-gray-600 mb-4">Transform your existing space with our expert renovation services that breathe new life into properties.</p>
+                        <a href="#" class="text-amber-500 font-medium flex items-center">
+                            Learn More <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 bg-gray-50
+</html>
